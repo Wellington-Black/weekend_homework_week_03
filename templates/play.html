@@ -1,0 +1,37 @@
+{% extends "/layout.html" %}
+
+{% block title %} Play against computer {% endblock %}
+
+{% block main %} 
+<body>
+    <div class="text-box form">
+
+        <form action="/winner" method="POST">
+
+            <div>
+                <h3>Enter your name</h3>
+                <label for=""></label>
+                <input type="text" name="name" id="name">
+                <br>
+            </div>
+           
+            <div>
+                <br>
+                <br>
+                <h3>Choose your move</h3>
+                <label for="choice"></label>
+                <select name="choice" id="choice">
+                    <option value="Rock" name="name">Rock</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Scissors">Scissors</option>
+                </select>
+            </div>
+            <div class="button">
+                <br>
+                <button class="btn" type="submit">Play</button>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}
+</html> 

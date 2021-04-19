@@ -1,0 +1,20 @@
+{% extends "/layout.html" %}
+
+{% block title %} Game with players choices {% endblock %}
+
+{% block main %} 
+<body>
+
+    <h2>Player {{ player_1.number }} choice was {{player_1.choice }}</h2>
+    <h2>Player {{ player_2.number }} choice was {{player_2.choice }}</h2>
+    <h2>The winner is:</h2>
+    {% if game_1.match_2(player_1, player_2) == "None" %}
+    <h2>{{ game_1.match_2(player_1, player_2) }} 😑 </h2>
+    {% else %}
+    <h2>Player {{ (game_1.match_2(player_1, player_2)).number }} > > {{(game_1.match_2(player_1, player_2)).name }} 💪 </h2>
+    {% endif  %}
+    <h2></h2>
+
+</body>
+{% endblock %}
+</html>

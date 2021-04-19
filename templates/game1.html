@@ -1,0 +1,17 @@
+{% extends "/layout.html" %}
+
+{% block title %} Game 1 {% endblock %}
+
+{% block main %} 
+<body>
+    {% if game_1.match_2(player_1, player_2) == "None" %}
+    <h2>{{ game_1.match_2(player_1, player_2) }}</h2>
+    {% else %}
+    <h2>Player {{ (game_1.match_2(player_1, player_2)).number }} wins by playing {{(game_1.match_2(player_1, player_2)).choice }}</h2>
+    {% endif  %}
+    <h2><a href="/rules1">Rules of the game</a></h2>
+    <h2><a href="/play">Play against computer</a></h2>
+
+</body>
+{% endblock %}
+</html>
